@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
 
-function Timer() {
+function Timer({ hidden }) {
     const [segundos, setSegundos] = useState(0);
 
     useEffect(() => {
         const Interval = setInterval(() => {
-            setSegundos((prev) => ++prev);
+            setSegundos((prev) => prev + 1);
         }, 1000);
 
         return () => {
@@ -16,9 +16,9 @@ function Timer() {
 
     return (
         <>
-            <div className="Timer">
-                <h2>Tempo: {segundos}s</h2>
-            </div >
+            <div className="Timer" style={{ display: hidden ? "none" : "flex" }}>
+                <h2 >Tempo: {segundos}s</h2>
+            </div>
         </>
     )
 }

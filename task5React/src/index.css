@@ -30,3 +30,22 @@ body {
   justify-content: center;
   flex-direction: column;
 }
+
+
+.container-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+
+button {
+  height: 50px;
+  width: 100px;
+  margin: 10px;
+  background: linear-gradient(135deg, rgba(223, 131, 11, 0.85), rgba(104, 94, 5, 0.85));
+  border: none;
+  border-radius: 7px;
+}
